@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+
+      <style>
+
+        /* head  */
+
+        img{
+            width: 100%;
+        }
+
+        head{
+            width: 100%;
+        }
+
+        #head a{
+          color: rgb(77, 77, 77);
+         font-size: 12px;
+         text-decoration: none;
+          }
+
+          #head a:hover{
+            color: darkorange;
+            
+          }
+
+        .material-icons:hover{
+            color: darkorange ;
+           
+        }
+
+        #head h3:hover{
+            border-bottom: 1px solid darkorange;
+        }
+
+       
+
+
+
+
+
+
+
+
+
+
+        
+        
+      
+
+       
+
+            /* heading1 */
+
+
+        #heading_1{
+            display: flex;
+            justify-content: space-between;
+            width: 95%;
+            margin: auto;
+            padding: 10px;
+           
+        }
+
+        .service_in_heading_1{
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        .service_in_heading_1 h3{
+           margin:8px;
+           font-size: 14px;
+        }
+
+        .service_in_heading_1 span{
+            margin-top: 6px;
+        }
+
+
+
+        /* heading_2  */
+
+        #symbol_search_and_cart{
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            /* border:1px solid red; */
+            margin: auto;
+       }
+
+       #logo_and_search{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        border: 1px solid red;
+       }
+
+       #bookoze_logo{
+        width: 10%;
+        margin-right: 3%;
+       }
+
+       #headsearch{
+        width: 100%;
+        /* border: solid red; */
+        border: 1px solid blue;
+        text-align: center;
+        align-items: center;
+       
+       }
+
+       #headsearch input{
+        width: 90%;
+        padding: 10px;      
+        border: 1px solid rgb(58, 58, 58);
+       }
+
+
+
+
+
+      
+
+
+
+      
+
+
+       #cart{
+        width: 10%;
+       }
+
+
+
+
+      
+
+    
+
+      
+
+       
+
+       .material-icons.md-48 { font-size: 38px; }
+
+
+      
+
+
+       /* heading_3 start here  */
+
+
+       #heading_3{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        justify-content: space-around;
+       }
+
+
+       #heading_3> h3>a{
+           margin:8px;
+           font-size: 16px;
+           color: darkgoldenrod;
+           text-decoration: none;
+        
+        }
+
+
+       
+
+       
+
+     
+
+       
+
+
+
+
+        
+
+       
+
+        
+
+
+
+
+/* footer start here    */
+
+.footer{
+        display: flex;
+        margin:0px;
+        background-color: white;
+        color:rgb(56, 54, 54);
+        justify-content: space-around;
+        margin:20px
+       }
+
+       .footer>div{
+        margin:10px;
+        }
+       
+
+       .footer >ul>li{
+        list-style: none;
+       }
+
+       .footer a{
+          text-decoration: none;
+          color: rgb(43, 43, 43);
+       }
+
+       .footer a:hover{
+        color: darkorange;
+        border-bottom: 1px solid darkorange;
+       }
+
+       .footer{
+        border: 1px solid black;
+        border-radius: 5px;
+       }
+
+
+
+
+      </style>
+
+</head>
+<body>
+
+ <!-- we have 3 heading: heading1,  heading2, heading3  -->
+
+
+
+
+    <div id="head">
+
+
+        <!-- heading 1 start here  -->
+
+        <nav id="heading_1">
+            <div class="service_in_heading_1">
+                <span class="material-icons">location_on</span>
+                <h3>
+                    <a href="">STORES & EVENT</a>
+                </h3><h3>|</h3>
+                <h3><a href="">BLOG & POST</a></h3><h3>|</h3>
+                <h3><a href="">MEMBERSHIP</a></h3><h3>|</h3>
+                <h3><a href="">COUPONS & DETAILS</a>|</h3>
+                <h3><a href="">BESTSELLERS</a></h3><h3>|</h3>
+                <h3><a href="">STORES & EVENT</a></h3><h3>|</h3>
+
+            </div>
+            
+          <div class="service_in_heading_1" id="sign_in_heading_1">
+                <span class="material-icons">
+                    account_circle
+                </span>
+                <h3>
+                    <a href="">
+                    MY ACCOUNT
+                    </a>
+                </h3>
+                <h3>|</h3>
+                <span class="material-icons">
+                    favorite_border
+                </span>
+                <span class="material-icons">
+                        favorite
+                </span>
+                <h3>
+                    <a href="">
+                        WISHLIST
+                    </a>
+                </h3>
+            </div>
+        </nav>
+
+
+
+
+    <!-- heading 2 start here -->
+
+    
+    
+
+        <div id="symbol_search_and_cart">
+            
+            <div id="logo_and_search">
+                <div id="bookoze_logo">
+                    <a href=""><img 
+                        src="Bookoze.png" 
+                        alt="logo">
+                    </a> 
+                </div>
+
+
+                <div id="headsearch" >
+                    <form id="addTodoForm">
+                        
+                
+                          <input type="search" placeholder="Search ny Title, Author, Keyword or ISBN" >
+
+                          <button style="background-color: black; width:40px; color: white; padding: 5px;" type="submit" class="material-icons ">search</button>
+                      
+                    </form>
+                </div>
+            </div>
+                
+                <div id="cart">
+                    <span class="material-icons md-48">
+                        shopping_cart
+                    </span>
+                </div>
+                    
+            
+            
+
+           
+
+
+           
+
+        </div>
+
+
+
+
+
+        <!-- heading 3 start here  -->
+
+        <div id="heading_3">
+            <h3> <a href=""> Books</a> </h3><h3>||</h3>
+            <h3><a href="">Finction </a></h3><h3>|</h3>
+            <h3><a href="">Notification</a></h3><h3>|</h3>
+            <h3><a href="">eBooks</a></h3><h3>|</h3>
+            <h3><a href="">Audiobooks</a></h3><h3>|</h3>
+            <h3><a href="">Teens & YA</a></h3><h3>|</h3>
+            <h3><a href="">Kids</a></h3><h3>|</h3>
+            <h3><a href="">Toys & Games</a></h3><h3>|</h3>
+            <h3><a href=""> Stationery & gifts</a></h3><h3>|</h3>
+            <h3><a href="">Musics & Movies</a></h3>
+        </div>
+    </div>
+
+<!-- we have 3 mid section mid1, mid2, mid3  -->
+
+
+<div id="mid-section">
+
+    <div id="mid_1">
+        <img style="margin:0px" src="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2022/12/PROD-25649_RUSH_PostHolidaySale_GlobalNavBanner_12-26_rd3.png" class="globalNavBannerImg" alt="">
+
+        <div style="height:40px; background-color: darkslategrey; color:aliceblue">
+            <h3 style="width: 30%; margin: auto;padding-top: 9px;">Free Shipping on Orders of $40 or More</h3> 
+        </div>
+
+
+        <img alt="" class="hp-quote-img" id="hpquoteimg1" style="max-width:100%; width:100%;" src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2022/12/26/25533_Quote_A3_Spare_12-26.jpg">
+    </div>
+
+</div>
+
+
+
+
+
+<section id="newThisWeek" class="section">
+    <div class="title">
+      <h2>New This Week <span>us</span></h2>
+    </div>
+  </section>
+  <!-- services -->
+  <section id="newPaperpack" class="section">
+    <div class="title">
+      <h2>our <span>New Paperpack</span></h2>
+    </div>
+  </section>
+  <!-- contact -->
+  <section id="bookozeTop100" class="section">
+    <div class="title">
+      <h2>featured <span>Bookoze Top 100</span></h2>
+    </div>
+  </section>
+
+  <section id="inspirationRead" class="section">
+    <div class="title">
+      <h2>featured <span>Inspiration Read</span></h2>
+    </div>
+  </section>
+
+
+    
+
+    <!-- footer start here  -->
+        <div class="footer">
+            <h3>About Bookoze</h3>
+            <ul>
+              <li><a href="">Newsroom</a></li>
+              <li><a href=""> Carriers</a> </li>
+              <li><a href="">Sephora Values</a></li>
+              <li><a href="">Affiliates</a></li>
+              <li><a href="">Gift Cards</a></li>
+              
+             
+              
+                
+            </ul>
+            
+
+            <ul>
+                <li><a href="">Facebook</a></li> 
+                <li><a href="">Twitter</a></li> 
+                <li><a href="">Instagram</a></li> 
+
+            </ul>
+            <br>
+            <ul>
+                <p><a href="">Help</a></p>
+                <p>Email us:<a href=""> Bookoze@gmail.com</a></p>
+                <p>Contact info:<a href=""> 099-8677-8767</a></p>
+                <p><a href="">Support</a> </p>
+
+            </ul>
+          
+          </div>
+</body>
+</html>
