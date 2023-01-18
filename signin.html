@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-in</title>
+    <!-- <link rel="stylesheet" href="style/signin.css"> -->
+    <style>
+        form {
+            width: 30%;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            margin: 0px auto;
+            padding: 30px;
+            font-size: bolder;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            border: px solid rgb(34, 4, 84);
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 30px;
+           font-weight: bold;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 10px;
+            color: black;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid rgb(8, 8, 8);
+            box-sizing: border-box;
+            resize: vertical;
+            
+        }
+
+        input[type="submit"]:hover {
+            background-color: orangered;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        #logo-img {
+            width: 35%;
+            margin: auto;
+       }
+
+        #logo-img img {
+            width: 100%;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="logo-img">
+        <img src="/images/logo.png.png" alt="">
+    </div>
+    <form>
+        <h2>Create New Account</h2>
+        <label>Full Name</label><br>
+        <input id="name" type="text" placeholder="Enter your name"><br>
+        <label>E-mail</label><br>
+        <input id="email" type="email" placeholder="Enter your email"><br>
+        <label for="pwd">Password</label><br>
+        <input type="password" id="password" name="pwd" minlength="4" placeholder="Enter password">
+        <p>Welcome to our side and expends your ideas with us</p>
+        <a href="login.html"><input id="butt" type="submit" value="SIGN UP"></a>
+        <h3>Already have an account? <a href="login.html">Log in</a></h3>
+    </form>
+
+
+</body>
+
+</html>
+<script src="scripts/signin.js"></script>
