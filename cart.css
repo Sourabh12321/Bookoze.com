@@ -1,0 +1,301 @@
+*{
+    padding: 0px;
+    font-family: Lato,sans;
+    margin: 0px;
+}
+
+
+
+/* meaid  */
+@media screen and (min-width: 480px) and  (max-width: 900px) {
+    #cards {
+      /* background-color: lightgreen; */
+      flex-direction: column;
+    }
+    #cards div{
+        width: 100%;
+    }
+  }
+
+/* <!-- top blue bckg heading  --> */
+#bg-blue{
+    background-color: #3d5962;
+    width: 100%;
+    text-align: center;
+}
+#bg-blue h3{
+    color: #f6f3f3;
+    font-family: Lato,serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.13;
+    letter-spacing: .53px;
+    padding: 10px 6%;
+    position: relative;
+}
+
+
+/* alert-notification/////////// */
+
+#alert-notification{
+    background-color: #EFD1BC;
+    font-family: Lato,serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 30px!important;
+    margin-bottom: 30px!important;
+    border-radius: 5px;
+    padding: 24px;
+    justify-content: center;
+    color: black;
+    width: 65%;
+    margin: auto;
+}
+
+
+/* <!-- Become a BN Member to Get Free Shipping!/ --> */
+#cards{
+    display: flex;
+    width: 68%;
+    margin: auto;
+}
+
+#platinum-card-div{
+    background-color: #F9EFE8;
+    width: 97%;
+    padding: 15px;
+     border-radius: 5px;
+     box-sizing: border-box;
+}
+#platinum-card-div h3,#platinum-card-div p{
+    margin-bottom: 7px;
+    text-align: center;
+    font-size: 18px;
+    font-family: poynter,Georgia, serif;
+}
+#platinum-card-div h3{
+    margin-top: 17px;
+    font-size: 24px;
+    margin-bottom: 7px;
+    text-align: center;
+}
+#membership-image-section-div{
+    display: flex;
+}
+#image-plati{
+    width: 50%;
+}
+#membership-image-section-div img{
+    width: 100%;
+}
+#checkbox-conditions{
+    margin-top: 20px;
+    text-align: left;
+}
+#checkbox-conditions h4{
+    font-size: 20px;
+    text-align: justify;
+}
+#checkbox-conditions p{
+    margin-top: 10px;
+    font-size: 14px;
+    color: #424242;
+    text-align: left;
+}
+#check{
+    color: #0288D1;
+}
+#checkbox-flex{
+    display: flex;
+    margin-top: 17px;
+}
+#accept-conidtion{
+    margin-top: -10px;
+    margin-left: 10px!important;
+}
+#checkbox-conditions button{
+    padding: 17px;
+    margin-top: 20px;
+    font-size: 17px;
+    background-color: #F9EFE8;
+    border: 1px solid black;
+}
+#checkbox-conditions button:hover{
+   color: white;    
+    background-color: black;
+}
+
+/* shopping line */
+.line{
+    border: 1px solid #9E9E9E;
+    width: 26%;
+    margin: auto;
+    height: 0px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+#My-shopping{
+    display: flex;
+    margin-top: 28px;
+    /* justify-content: center; */
+    align-items: center;
+}
+#My-shopping h3{
+    font-size: 25px;
+    font-family: poynter,Georgia, serif;
+}
+
+
+/* <!-- Items appneded from Barnes & Noble --> */
+#item-cards{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+#items-show-here{
+    margin-top: 30px;
+    width: 97%;
+    border: 1px solid #9E9E9E;
+}
+#totalItem{
+   background-color: #F2F2F1;
+    padding: 19px;
+    font-family: Poynter,Georgia,serif;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+/* #item-cards{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px;
+    width: 70%;
+    margin: auto;
+} */
+#item-cards div{
+    display: flex;
+    padding: 10px;
+    margin-top: 20px;
+    width: 70%;
+    margin: auto;
+    
+}
+.card-divs{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-top: 10px!important;
+}
+
+#item-cards img{
+    width: 24%;
+}
+
+/* ORDER SUMMARY */
+/* subtotal-parent-div */
+#right{
+    width: 60%;
+}
+#order-summary{
+    border: 1px solid #9E9E9E;
+    /* width: 60%; */
+    height: 530px;
+    /* margin-left: -40px; */
+}
+#order-title{
+    text-align: center;
+    font-size: 27px;
+    font-style: inherit;
+    margin-top: 15px;
+}
+.subtotal-parent-div{
+    padding: 8px 19px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-style: inherit;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+#hr-line{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+#checkout-button{
+    margin-top: 10px!important;
+    padding: 10px 80px;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: #254D3E;
+    font-size: 21px;
+}
+
+#or-checkout{
+    font-size:12px!important;
+}
+
+#checkout-logos{
+    margin-top: 20px!important;
+    background-color: rgb(242,186,54);
+    width: 75%;
+    border-radius: 5px;
+    padding: 3px;
+    margin: auto;
+    height: 30px;
+}
+.paypal-logo{
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 8px;
+    height: 17px;
+}
+
+#visa{
+    margin-top: 20px!important;
+    width: 80%;
+    margin: auto;
+}
+#visa img{
+    width: 100%;
+    
+}
+
+/* apply-coupon */
+.coupon-border{
+    margin-top: 20px;
+    border: 1px solid #9E9E9E;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#apply-coupon{
+    width: 80%;
+    margin-top: 15px!important;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+#apply-coupon-input{
+padding: 17px;
+border: 1px solid #254D3E;
+columns: #E0E0E0;
+background-color: #F2F2F1;
+}
+#apply-coupon button{
+    padding: 17px;
+    background-color: #254D3E;
+    margin-left: -10px;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+
+/* footer */
+#footer{
+    width: 68%;
+    margin: auto;
+    margin-top: 30px!important;
+    margin-bottom: 15px!important;
+}
