@@ -45,11 +45,18 @@
     margin-top: 30px!important;
     margin-bottom: 30px!important;
     border-radius: 5px;
-    padding: 24px;
+    padding: 15px;
     justify-content: center;
+    align-items: center;
     color: black;
     width: 65%;
     margin: auto;
+}
+#alert-here{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 18px;
 }
 
 
@@ -181,9 +188,19 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     margin-top: 10px!important;
 }
+.card-divs button{
+    padding: 0px 6px;
+}
+#removebtn{
+    margin-left: 7px;
+}
+.card-divs h3{
+    font-size: 13px;
+    margin: 9px;
+}
 
 #item-cards img{
-    width: 24%;
+    width: 70%;
 }
 
 /* ORDER SUMMARY */

@@ -3,6 +3,14 @@ console.log(addCart)
 let totalItems = document.getElementById('total-items')
 let productCart = document.getElementById('item-cards')
 let subtotal = document.getElementById('subtotal-items')
+let subtotalSum = document.getElementById('subtotal')
+let estimatedShipping = document.getElementById('estimated-shipping')
+let tax = document.getElementById('tax')
+let orderTotal = document.getElementById("order-total")
+let alert = document.getElementById("alert-here")
+let couponInput = document.getElementById("apply-coupon-input")
+let couponButton = document.getElementById("coupon-btn")
+
 
 function append(){
     productCart.innerHTML = null
@@ -20,18 +28,48 @@ function append(){
 
         let otherthings = document.createElement("div")
         let price = document.createElement("p")
-        price.innerText = item.price
+        price.innerText = "$" + item.price
 
         totalItems.innerText = addCart.length
         subtotal.innerText = addCart.length
 
+        let quan = document.createElement("div")
+        quan.setAttribute("id","quantity-div")
+        let add = document.createElement("button")
+        let less = document.createElement("button")
+        let span = document.createElement("span")
+        add.innerText = "+"
+        less.innerText = "-"
+        span.innerText = item.quantity
+
+        add.addEventListener("click",()=>{
+            item.quantity++
+            span.innerText = item.quantity
+            totalOf()
+        })
+        less.addEventListener("click",()=>{
+            item.quantity--
+            span.innerText = item.quantity
+            totalOf()
+        })
+
         let remove = document.createElement("button")
+        remove.setAttribute("id","removebtn")
         remove.innerText = "Remove"
+
+        remove.addEventListener("click",()=>{
+            addCart.splice(index,1)
+            localStorage.setItem("cart",JSON.stringify(addCart))
+            append()
+            totalOf()
+              
+          })
 
 
         imagediv.append(image)
-        otherthings.append(price,remove)
-        div.append(title,imagediv,otherthings)
+        quan.append(add,span,less,remove)
+        otherthings.append(price)
+        div.append(title,imagediv,otherthings,quan)
         productCart.append(div)
 
     })
@@ -39,26 +77,39 @@ function append(){
 
 append()
 
+let sum;
+function totalOf(){
+    sum = 0
+    for(let key of addCart){
+        sum += key.price*key.quantity
+    }
+    subtotalSum.innerText = Math.ceil(sum) 
+    tax.innerText = Math.ceil(sum*0.05)
+    orderTotal.innerText = Math.ceil(sum)
+    if(sum<40){
+        if(sum==0){
+            estimatedShipping.innerText = 0
+        }else{
+            estimatedShipping.innerText = 40
+        }
+        alert.innerText = `
+        ADD $${40-Math.floor(sum)} OF ELIGIBLE ITEMS TO QUALIFY FOR FREE SHIPPING
+        `
+    }else{
+        estimatedShipping.innerText = 0
+        alert.innerText = `
+        YOUR ORDER QUALIFIES FOR FREE STANDARD SHIPPING
+        `
+    }
+}
+totalOf()
 
-// function appendData (data){
-//     let getcard = `
-//         ${
-//             data.map(item => {
-//                 return getdata(item.title,item.image,item.price)
-//             }).join(" ")
-//         }
-//     `
-//     productCart.innerHTML = getcard
-// }
 
-// appendData (addCart)
+couponButton.addEventListener("click",()=>{
+    let result = couponInput.value
 
-// function getdata(title,image,price){
-//     let card = `
-//     <div class="card">
-//     <h3 id="title">${title}</h3>
-//     <img src=${image} alt="">
-//     <p>${price}</p>
-//     </div>
-//     `
-// }
+    if(result == "WE5"){
+        temp = sum*0.3
+        orderTotal.innerText = Math.ceil(sum-temp) + `(-${Math.ceil(temp)})`
+    }
+})
