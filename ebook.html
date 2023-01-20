@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBooks</title>
+    <style>
+      *{ 
+        font-family: "Lato",sans-serif;
+        }
+        #main{
+
+        }
+        #free{
+            display: flex;
+            width: 100%;
+            background-color: grey;
+            color: white;
+            padding: 10px;
+            margin: auto;
+        }
+        #free > h3{
+            margin: auto;
+            justify-content: center;
+        }
+        #off{
+            display: block;
+           text-align: center;
+        }
+        #vl {
+             border-left: 1px solid rgb(102, 126, 102);
+            height: 1800px;
+        }
+        .middle{
+            display: flex;
+            text-align: center;   
+            padding: 1%;       
+        }
+        #link{
+            width: 20%;
+            margin: auto;
+        }
+        #books{
+            width: 80%;
+            padding: 2%;
+        }
+        #links>a{
+            margin: 5px;
+            text-decoration: none;  
+            color: black;
+        }
+     
+        .nookGlow{
+            display: flex;
+            padding-left: 10%;
+        }
+        img{
+            width: 200px;
+        }
+        .line{
+            border-left: 1px solid rgb(102, 126, 102);
+            height: 220px;
+            padding: 1%;
+        }
+        .text{
+            text-align: start;
+            text-align: justify;
+            padding-left: 4%;
+            padding-right: 2%;
+            width: 50%;
+        }
+        #fic{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+        #fic>div{
+            margin:auto;
+            width: 80%;
+        }
+        #fic>div>img{
+            width: 200px;
+        }
+        .offer>h2{
+        font-family: sans-serif;
+        margin: auto;
+        text-align: center;       
+        position: relative;
+        }
+        .offer>h2::after{
+            content: "";
+        display: block;
+        width: 35%;
+        height: 1.5px;
+        background: #191970;
+        right: 0;
+        top: 50%;
+        position: absolute;
+        margin-left: 3%;
+        }
+        .offer>h2::before{
+            content: "";
+        display: block;
+        width: 35%;
+        height: 1.5px;
+        background: #191970;
+        left: 0;
+        top: 50%;
+        position: absolute;
+        margin-right: 2%;
+        }
+        .sale>div{
+            display: flex;
+            justify-content: center;
+            margin: 2%;
+        }
+        .texter{
+            width: 30%;
+            padding-left: 4%;
+            padding-right: 4%;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <a href="./whishlist.html">WISHLIST</a>
+    
+<div id="main">
+    <div id="free">
+        <h3>Free Shipping on Orders of $40 or More</h3>
+    </div>
+    <div id="off">
+        <h1>Fiction Book Store</h1>
+        <p>Discover the best books to read right now including trending titles, bookseller recommendations, new releases and more.</p>
+    </div>
+  <div class="middle">
+    <div id="links">
+        <h4>CUSTOMER FAVORITES</h4>
+        <a href="#">B&N Top 100</a><br>
+        <a href="#">Teens & YA Top 100</a><br>
+        <a href="#">NY Times® Bestsellers</a><br>
+        <a href="#">New Releases</a><br>
+        <a href="#">Books by Subject</a><br>
+        <a href="#">Coming Soon</a><br>
+        <br>
+        <h4>SPECIAL VALUES</h4>
+        <a href="#">50% Off Thousands of Books</a><br>
+        <a href="#">Buy 1, Get 1 50% Off</a><br>
+        <a href="#">Bestsellers 40% Off</a><br>
+        <a href="#">Up to 40% Off Pre-Orders</a><br>
+        <a href="#">Book Annex</a><br>
+        <a href="#">Coupons & Deals</a><br>
+        <br>
+        <h4>SPECIAL COLLECTIONS</h4>
+        <a href="#">Start Your New Year on the Right Page
+        </a><br>
+        <a href="#">The Best Books of 2022</a><br>
+        <a href="#">B&N Book of the Year</a><br>
+        <a href="#">New Releases</a><br>
+        <a href="#">Books by Subject</a><br>
+        <a href="#">Bookseller Favorites</a><br>
+        <br>
+        <h4>PRICES</h4>
+        <a href="#">Under $5</a><br>
+        <a href="#">$5 - $10</a><br>
+        <a href="#">$10 - $25</a><br>
+        <a href="#">$25 - $50</a><br>
+        <br>
+        <h4>FORMATS</h4>
+        <a href="#">Hardcover</a><br>
+        <a href="#">Board Book</a><br>
+        <a href="#">BN Exclusive</a><br>
+        <a href="#">Signed Book</a><br>
+        <a href="#">Paperback</a><br>
+        <a href="#">Large Print</a><br>
+        <a href="#">Calendar</a><br>
+        <a href="#">Other Format</a><br>
+        <br>
+        <h4>LANGUAGE</h4>
+        <a href="#">English</a><br>
+        <a href="#">Spanish</a><br>
+    </div>
+    <div id="vl"></div>
+    <div id="books">
+        
+        <div class="offer" id="nook">
+            <h2>$20 Off NOOK GlowLight 4e</h2>
+           <div class="nookGlow"> 
+            <img src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&product=path%5B/pimages/9780594149279_p0_v7%5D&call=url%5Bfile:common/decodeProduct.chain%5D" alt="">
+            <div class="text"><p style="font-size: 22px;">NOOK GlowLight 4e</p>
+            <p> Compact & Lightweight, NOOK GlowLight® 4e makes the perfect travel companion. 
+                Carry your library, with thousands of books at your fingertips. GlowLight Illumination & Night Mode help you read in any light.</p>
+        </div>
+        <div class="line"></div>
+         <p style="padding: 5%; font-size: 18px;">NOOK <br> $99.99 </p>
+        </div>
+
+        </div>
+        <div class="sale offer">
+     <h2>On Sale Now (50% off)</h2>
+     <div>
+        <img src="https://prodimage.images-bn.com/pimages/9781538742167_p0_v4_s600x595.jpg" alt="">
+        <div class="texter">       
+            <h4>
+                The January 6 Report: Findings from the Select Committee to Investigate the Attack on the U.S. Capitol with Reporting, Analysis and Visuals by The New York Times</h4>
+               <p>Read the report from the select committee’s investigation into the Jan. 6 attack on the Capitol, with accompanying insights from New York Times reporters who’ve covered the story from the beginning.               </p>
+            </div>
+    </div>
+        </div>
+        
+            <div class="offer" id="fiction">
+                <h2>Books you love</h2>
+                <p><a href="#">See All</a></p>
+                <div id="fic"></div>
+               
+            </div>
+      
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+<script src="./ebook.js"></script>

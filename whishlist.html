@@ -5,19 +5,146 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whishlist</title>
+    <style>
+        .main{
+            /* text-align: center; */
+        }.main>h1{
+            margin: auto;
+        text-align: center;       
+        position: relative;
+        }
+        .main>h1::after{
+            content: "";
+        display: block;
+        width: 38%;
+        height: 1.5px;
+        background: #4a7152;
+        right: 0;
+        top: 50%;
+        position: absolute;
+        margin-right: 3%;
+        }
+        .main>h1::before{
+            content: "";
+        display: block;
+        width: 38%;
+        height: 1.5px;
+        background: #4a7152;
+        left: 0;
+        top: 50%;
+        position: absolute;
+        margin-left: 3%;
+        }
+        a{
+            text-decoration: none;
+        }
+        .inner{
+            display: flex;
+            margin: auto;
+            width: 100%;
+        }
+        .create-new-wishlist{
+            width: 20%;
+            text-align: center;
+        }
+        .MW-main{
+            display: flex;
+            margin: auto;
+            padding-left: 3%;
+            padding-right: 3%;
+            justify-content: space-between;
+        }
+         
+        hr{
+            margin: auto;
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+        #vl {
+             border-left: 1px solid rgb(102, 126, 102);
+            height: 1000px;
+        }
+        .my-wishlist{
+            width: 80%;
+        }
+        .select{
+            display: flex;
+            margin: auto;
+            padding-top: 1%;
+            padding-right: 4%;
+           justify-content: flex-end;
+
+        }
+        .select>select{
+            margin-right: 2%;
+            height: 45px;
+           text-align: center;
+        }
+        .items>div{
+            display: flex;
+            margin-bottom: 3%;
+            
+        }
+        img{
+            width: 40%;
+            padding-left: 3%;
+        }
+      
+    </style>
 </head>
 <body>
-    <a href="./books.html">BOOKS</a>
-    <select name="" id="sort">
-        <option value="default">Sort by :</option>
-        <option value="latest">Latest - Oldest</option>
-        <option value="oldest">Oldest - Lastest</option>
-        <option value="AtoZ">Title- A-Z</option>
-        <option value="ZtoA">Title- Z-A</option>
-    </select>
-    <div id="want-to-buy">
+    <a href="./ebook.html">BOOKS</a>
+    <div class="main">
+        <h1>Your Wishlists</h1>
+        <div class="inner">
+        <div class="create-new-wishlist">
+            <div class="your">
+                <h4>Your Wishlists</h4>
+                <a href="#"><p>My Whishlist</p></a>
+            </div>
+            <hr>
+            <div class="create">
+                <span>+<p>Create New Wishlist</p></span>
+            </div>
+        </div>
+        <div id="vl"></div>
+        <div class="my-wishlist">
+         <div class="MW-main">
+           <div class="MW-first">
+            <a href="#">
+                 <h2>My Whishlist</h2>
+                <p>This List is: Private</p></a>           
+           </div>
+            <div class="MW-sec">
+                <a href="#">
+                    <!-- <span><img src="" alt=""></span> -->
+                    <p>Edit this Wishlist</p>
+                </a>
+            </div>
+        </div>
+        <hr>
+         <div class="select">
+            <select name="" id="sort" style="width: 180px;">
+                <option value="default">Sort by :</option>
+                <option value="latest">Latest - Oldest</option>
+                <option value="oldest">Oldest - Lastest</option>
+                <option value="AtoZ">Title- A-Z</option>
+                <option value="ZtoA">Title- Z-A</option>
+            </select>
+            <select name="" id="result" style="width: 90px;">
+                <option value="default">Result</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+         </div>
+         <div id="items-in-wishlist" class="items">
         
+         </div>
+        </div>
     </div>
+    </div>
+  
+    
 </body>
 </html>
 <script src="./wishlist.js"></script>
