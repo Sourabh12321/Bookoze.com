@@ -246,7 +246,10 @@
     background-color: #254D3E;
     font-size: 21px;
 }
+#check-btn-link{
+    text-decoration: none!important;
 
+}
 #or-checkout{
     font-size:12px!important;
 }

@@ -11,7 +11,6 @@ let alert = document.getElementById("alert-here")
 let couponInput = document.getElementById("apply-coupon-input")
 let couponButton = document.getElementById("coupon-btn")
 
-
 function append(){
     productCart.innerHTML = null
 
@@ -20,7 +19,7 @@ function append(){
         div.setAttribute("class","card-divs")
 
         let title = document.createElement("h3")
-        title.innerText = item.title.substring(0,20)
+        title.innerText = item.title
 
         let imagediv = document.createElement("div")
         let image = document.createElement("img")
@@ -91,6 +90,9 @@ function totalOf(){
             estimatedShipping.innerText = 0
         }else{
             estimatedShipping.innerText = 40
+            sum += 40
+            
+            orderTotal.innerText = Math.ceil(sum)
         }
         alert.innerText = `
         ADD $${40-Math.floor(sum)} OF ELIGIBLE ITEMS TO QUALIFY FOR FREE SHIPPING
@@ -101,6 +103,8 @@ function totalOf(){
         YOUR ORDER QUALIFIES FOR FREE STANDARD SHIPPING
         `
     }
+    sum = Math.ceil(sum)
+    localStorage.setItem("sum",sum)
 }
 totalOf()
 
@@ -110,6 +114,7 @@ couponButton.addEventListener("click",()=>{
 
     if(result == "WE5"){
         temp = sum*0.3
+        sum +=Math.ceil(temp)
         orderTotal.innerText = Math.ceil(sum-temp) + `(-${Math.ceil(temp)})`
     }
 })

@@ -1,157 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="checkout.css">
-</head>
-<body>
-    <nav class="bg-white">
-        <div class="d-flex align-items-center">
-        <div class="logo"> <a href="#" class="text-uppercase">shop</a> </div>
-        <div class="ml-auto"> <a href="#" class="text-uppercase">Back to shopping</a> </div>
-        </div>
-        </nav>
-        <header>
-        <div class="d-flex justify-content-center align-items-center pb-3">
-        <div class="px-sm-5 px-2 active">SHOPPING CART <span class="fas fa-check"></span> </div>
-        <div class="px-sm-5 px-2">CHECKOUT</div>
-        <div class="px-sm-5 px-2">FINISH</div>
-        </div>
-        <div class="progress">
-        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-        </header>
-        <div class="wrapper">
-        <div class="h5 large">Billing Address</div>
-        <div class="row">
-        <div class="col-lg-6 col-md-8 col-sm-10 offset-lg-0 offset-md-2 offset-sm-1">
-        <div class="mobile h5">Billing Address</div>
-        <div id="details" class="bg-white rounded pb-5">
-        <form>
-        <div class="form-group"> <label class="text-muted">Name</label> <input type="text" value="David Smith" class="form-control"> </div>
-        <div class="form-group"> <label class="text-muted">Email</label>
-        <div class="d-flex jusify-content-start align-items-center rounded p-2"> <input type="email" value="david.343@gmail.com"> <span class="fas fa-check text-success pr-sm-2 pr-0"></span> </div>
-        </div>
-        <div class="row">
-        <div class="col-lg-6">
-        <div class="form-group"> <label>City</label>
-        <div class="d-flex jusify-content-start align-items-center rounded p-2"> <input type="text" value="Houston"> <span class="fas fa-check text-success pr-2"></span> </div>
-        </div>
-        </div>
-        <div class="col-lg-6">
-        <div class="form-group"> <label>Zip code</label>
-        <div class="d-flex jusify-content-start align-items-center rounded p-2"> <input type="text" value="77001"> <span class="fas fa-check text-success pr-2"></span> </div>
-        </div>
-        </div>
-        </div>
-        <div class="row">
-        <div class="col-lg-6">
-        <div class="form-group"> <label>Address</label>
-        <div class="d-flex jusify-content-start align-items-center rounded p-2"> <input type="text" value="542 W.14th Street"> <span class="fas fa-check text-success pr-2"></span> </div>
-        </div>
-        </div>
-        <div class="col-lg-6">
-        <div class="form-group"> <label>State</label>
-        <div class="d-flex jusify-content-start align-items-center rounded p-2"> <input type="text" value="NY"> <span class="fas fa-check text-success pr-2"></span> </div>
-        </div>
-        </div>
-        </div> <label>Country</label> <select name="country" id="country">
-        <option value="usa">USA</option>
-        <option value="ind">INDIA</option>
-        </select>
-        </form>
-        </div> <input type="checkbox" checked> <label>Shipping address is same as billing</label>
-        <div id="address" class="bg-light rounded mt-3">
-        <div class="h5 font-weight-bold text-primary"> Shopping Address </div>
-        <div class="d-md-flex justify-content-md-start align-items-md-center pt-3">
-        <div class="mr-auto"> <b>Home Address</b>
-        <p class="text-justify text-muted">542 W.14th Street</p>
-        <p class="text-uppercase text-muted">NY</p>
-        </div>
-        <div class="rounded py-2 px-3" id="register"> <a href="#"> <b>Register Now</b> </a>
-        <p class="text-muted">Create account to have multiple address saved</p>
-        </div>
-        </div>
-        </div>
-        </div>
-        <div class="col-lg-6 col-md-8 col-sm-10 offset-lg-0 offset-md-2 offset-sm-1 pt-lg-0 pt-3">
-        <div id="cart" class="bg-white rounded">
-        <div class="d-flex justify-content-between align-items-center">
-        <div class="h6">Cart Summary</div>
-        <div class="h6"> <a href="#">Edit</a> </div>
-        </div>
-        <div class="d-flex jusitfy-content-between align-items-center pt-3 pb-2 border-bottom">
-        <div class="item pr-2"> <img src="https://images.unsplash.com/photo-1569488859134-24b2d490f23f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" width="80" height="80">
-        <div class="number">2</div>
-        </div>
-        <div class="d-flex flex-column px-3"> <b class="h5">BattleCreek Coffee</b> <a href="#" class="h5 text-primary">C-770</a> </div>
-        <div class="ml-auto"> <b class="h5">$80.9</b> </div>
-        </div>
-        <div class="my-3"> <input type="text" class="w-100 form-control text-center" placeholder="Gift Card or Promo Card"> </div>
-        <div class="d-flex align-items-center">
-        <div class="display-5">Subtotal</div>
-        <div class="ml-auto font-weight-bold">$80.9</div>
-        </div>
-        <div class="d-flex align-items-center py-2 border-bottom">
-        <div class="display-5">Shipping</div>
-        <div class="ml-auto font-weight-bold">$12.9</div>
-        </div>
-        <div class="d-flex align-items-center py-2">
-        <div class="display-5">Total</div>
-        <div class="ml-auto d-flex">
-        <div class="text-primary text-uppercase px-3">usd</div>
-        <div class="font-weight-bold">$92.98</div>
-        </div>
-        </div>
-        </div>
-        <p class="text-muted">Need help with an order?</p>
-        <p class="text-muted"><a href="#" class="text-danger">Hotline:</a>+314440160 (International)</p>
-        <div class="h4 pt-3"> <span class="fas fa-shield-alt text-primary pr-2"></span> Security of your shopping</div>
-        <div id="summary" class="bg-white rounded py-2 my-4">
-        <div class="table-responsive">
-        <table class="table table-borderless w-75">
-        <tbody>
-        <tr class="text-muted">
-        <td>Battlecreek Coffee</td>
-        <td>:</td>
-        <td>$80.9</td>
-        </tr>
-        <tr class="text-muted">
-        <td>Code-770</td>
-        <td>:</td>
-        <td>770</td>
-        </tr>
-        <tr class="text-muted">
-        <td>Quantity</td>
-        <td>:</td>
-         <td>
-        <div class="d-flex align-items-center"> <span class="fas fa-minus btn text-muted"></span> <span>2</span> <span class="fas fa-plus btn text-muted"></span> </div>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        </div>
-        <div class="border-top py-2 d-flex align-items-center ml-2a font-weight-bold">
-        <div>Total</div>
-        <div class="ml-auto text-primary">USD</div>
-        <div class="px-2">$92.98</div>
-        </div>
-        </div>
-        <div class="row pt-lg-3 pt-2 buttons mb-sm-0 mb-2">
-        <div class="col-md-6">
-        <div class="btn text-uppercase">back to shopping</div>
-        </div>
-        <div class="col-md-6 pt-md-0 pt-3">
-        <div class="btn text-white ml-auto"> <span class="fas fa-lock"></span> Continue to Shopping </div>
-        </div>
-        </div>
-        <div class="text-muted pt-3" id="mobile"> <span class="fas fa-lock"></span> Your information is save </div>
-        </div>
-        </div>
-        <div class="text-muted"> <span class="fas fa-lock"></span> Your information is save </div>
-        </div> 
-</body>
+
+     <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="shortcut icon" href="./images/fav-icon.png" type="image/x-icon">
+          <link rel="stylesheet" href="checkout.css">
+          <title></title>
+
+     </head>
+
+     <body>
+          <div id="container">
+               <header>
+                    <div id="cart-navbar">
+                         <div>
+                              <a href="/">
+                                   <img id="logo" src="./images/Bookoze.png" alt="logo">
+                              </a>
+                         </div>
+                    </div>
+               </header>
+               <main id="cart-main">
+
+                    <div id="myBag_major">
+                         <div id="myBag_minor">
+                              <h3>CHECKOUT</h3><span></span>
+                         </div>
+                    </div>
+                    <div id="all_eliments">
+
+                         <div id="main_div">
+                              <div id="lhs_cartDiv">
+                                   <div id="totalBillSection">
+                                        <div>
+                                             <div id="totalBillSection_img"><img
+                                                       src="https://cdn-icons-png.flaticon.com/512/1611/1611154.png"
+                                                       alt=""></div>
+                                             <div>
+                                                  <h3>PAYABLE AMOUNT</h3>
+                                             </div>
+                                        </div>
+                                        <div>
+                                             <h3 id="totalPrice__">Rs. 1,233</h3>
+                                        </div>
+                                   </div>
+                                   <div id="payableSection_Pr">
+                                        <div id="payableSectionImg_Pr"><img
+                                                  src="https://cdn-icons-png.flaticon.com/128/7992/7992696.png" alt="">
+                                        </div>
+                                        <div id="payableSectionH_Pr">
+                                             <h3>PAYMENT METHODS</h3>
+                                        </div>
+                                   </div>
+                                   <div>
+                                        <div class="justFlexIt">
+                                             <div><button class="changeInBTN" id="C_D_card">></button></div>
+                                             <div>
+                                                  <p>Credit / Debit Card</p>
+                                             </div>
+                                        </div>
+                                        <div id="cardPayment">
+                                             <div>
+                                                  <div>
+                                                       <p>Enter your card number (Visa, Mastercard, Amex)</p>
+                                                  </div>
+                                                  <div><input id="cardNo" type="text" maxlength="16"></div>
+                                                  <div>
+                                                       <p id="makeCardP1None">Please enter card Id as digits</p>
+                                                  </div>
+                                             </div>
+                                             <div>
+                                                  <div>
+                                                       <p>Enter Name on Card </p>
+                                                  </div>
+                                                  <div><input id="cardName" type="text"></div>
+                                                  <div>
+                                                       <p id="makeCardP2None">* Invalid Characters</p>
+                                                  </div>
+                                             </div>
+                                             <div id="CVV">
+                                                  <div>
+                                                       <p>CVV</p>
+                                                  </div>
+                                                  <div><input id="cardCVV" type="password" maxlength="3"></div>
+                                             </div>
+                                             <div>
+                                                  <p>Save card as per RBI guidelines</p>
+                                             </div>
+                                        </div>
+
+                                        <div class="justFlexIt">
+                                             <div><button class="changeInBTN" id="N_banking">></button></div>
+                                             <div>
+                                                  <p>Net Banking</p>
+                                             </div>
+                                        </div>
+                                        <div id="popularbanks">
+                                             <div>
+                                                  <p>Popular Banks</p>
+                                             </div>
+                                             <div id="popularbanks_button">
+                                                  <button><img
+                                                            src="https://static.nnnow.com/client/assets/images/netbanking/axis.png"
+                                                            alt="">
+                                                       <p>AXIS</p>
+                                                  </button>
+                                                  <button><img
+                                                            src="https://static.nnnow.com/client/assets/images/netbanking/hdfc.png"
+                                                            alt="">
+                                                       <p>HDFC</p>
+                                                  </button>
+                                                  <button><img
+                                                            src="https://static.nnnow.com/client/assets/images/netbanking/icici.png"
+                                                            alt="">
+                                                       <p>ICICI</p>
+                                                  </button>
+                                                  <button><img
+                                                            src="https://static.nnnow.com/client/assets/images/netbanking/sbi.png"
+                                                            alt="">
+                                                       <p>SBI</p>
+                                                  </button>
+                                                  <button><img
+                                                            src="https://static.nnnow.com/client/assets/images/netbanking/kotak.png"
+                                                            alt="">
+                                                       <p>Kotak</p>
+                                                  </button>
+                                             </div>
+                                             <div>
+                                                  <p>All Banks</p>
+                                             </div>
+                                             <select name="All Banks" id="selectBanks">
+                                                  <option value="">Select Banks</option>
+                                                  <option value="">AXIS</option>
+                                                  <option value="">Bank of India</option>
+                                                  <option value="">Central Bank of India</option>
+                                                  <option value="">Corporation Bank</option>
+                                                  <option value="">Development Credit Bank</option>
+                                                  <option value="">HDFC</option>
+                                                  <option value="">ICICI</option>
+                                                  <option value="">SBI</option>
+                                                  <option value="">KOTAK</option>
+                                             </select>
+                                             <div>
+                                                  <p>
+                                                       You will be re-directed to a secure payment gateway</p>
+                                             </div>
+                                        </div>
+                                        <div class="justFlexIt">
+                                             <div><button class="changeInBTN" id="O_wallets">></button></div>
+                                             <div>
+                                                  <p>Other Wallets</p>
+                                             </div>
+                                        </div>
+                                        <div id="otherWallets">
+                                             <div id="otherWallets_button">
+                                                  <button class="OWcount_Pr"><img
+                                                            src="https://static.nnnow.com/client/assets/images/razorpay/Amazonpay.png"
+                                                            alt="">
+                                                       <p>Amazon Pay</p>
+                                                  </button>
+                                                  <button class="OWcount_Pr"><img
+                                                            src="https://static.nnnow.com/client/assets/images/razorpay/phonepe.png"
+                                                            alt="">
+                                                       <p>PhonePe</p>
+                                                  </button>
+                                                  <button class="OWcount_Pr"><img
+                                                            src="https://static.nnnow.com/client/assets/images/razorpay/freecharge.png"
+                                                            alt="">
+                                                       <p>Freecharge Wallet</p>
+                                                  </button>
+                                                  <button class="OWcount_Pr"><img
+                                                            src="https://static.nnnow.com/client/assets/images/razorpay/Mobikwik.png"
+                                                            alt="">
+                                                       <p>Mobikwik</p>
+                                                  </button>
+                                                  <button class="OWcount_Pr"><img
+                                                            src="https://static.nnnow.com/client/assets/images/razorpay/airtel.png"
+                                                            alt="">
+                                                       <p>Airtel Money</p>
+                                                  </button>
+                                                  <button class="OWcount_Pr"><img
+                                                            src="https://static.nnnow.com/client/assets/images/razorpay/olamoney.png"
+                                                            alt="">
+                                                       <p>Ola Money</p>
+                                                  </button>
+                                                  <button class="OWcount_Pr"><img
+                                                            src="https://static.nnnow.com/client/assets/images/razorpay/payzapp.png"
+                                                            alt="">
+                                                       <p>Payzapp</p>
+                                                  </button>
+                                             </div>
+                                        </div>
+                                        <div class="justFlexIt">
+                                             <div><button class="changeInBTN" id="Upi">></button></div>
+                                             <div>
+                                                  <p>UPI</p>
+                                             </div>
+                                        </div>
+                                        <div id="UPIpayment">
+                                             <p>UPI ID:</p>
+                                             <input id="thisIsUpi" type="text" placeholder="example@bank">
+                                        </div>
+                                        <div class="justFlexIt">
+                                             <div><button class="changeInBTN" id="Cash_on_Delivery">></button></div>
+                                             <div>
+                                                  <p>Pay on Delivery(UPI,Wallet,Cash and Card)</p>
+                                                  <p id="makeItRed">(additional charge ₹ 99)</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div id="rhs_div">
+                                   <div id="total_div">
+                                        <div id="item_details">
+                                             <h4 id="overview">OVERVIEW</h4>
+                                             <div id="subtotal"><span>Subtotal</span><span> Rs. 0</span></div>
+                                             <div id="delivery_charges"><span></span><span> Rs. 0</span>
+                                             </div>
+                                             <div id="line"></div>
+                                             <div id="total"><span>Total</span><span> Rs. 1,233</span></div>
+                                        </div>
+                                        <button class="checkout" id="order">CONFIRM ORDER</button>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </main>
+          </div>
+
+          <div id="loader">
+               <div>
+                    <img src="./images/Eclipse-0.9s-191px (2).gif" alt="">
+               </div>
+          </div>
+          <script src="./check.js"></script>
+     </body>
+
 </html>
