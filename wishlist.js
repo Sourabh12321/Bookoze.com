@@ -47,6 +47,9 @@ displayBooks(restData);
     let  authors = document.createElement("p");
      authors.innerText = element. authors;
 
+     let price = document.createElement("h3");
+     price.innerText = "$ 40";
+
      let add = document.createElement("button")
      add.innerText = "Add to Cart"
      
@@ -72,10 +75,20 @@ displayBooks(restData);
     }
 
     })
- 
+
+    let remove=document.createElement("button")
+    remove.innerText="Remove";
+    remove.addEventListener("click",()=>{
+        restData=restData.filter((el) => {
+            return element.id!=el.id;
+        })
+        localStorage.setItem("wish-list",JSON.stringify(restData))
+    displayBooks(restData)
+    })
+
     
    img.append(image) 
-   card.append(title, subtitle, authors, add);
+   card.append(title, subtitle, authors, price, add, remove);
    book.append(img,card)
    basket.append(book);
     });

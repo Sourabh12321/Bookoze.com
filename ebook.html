@@ -9,12 +9,8 @@
       *{ 
         font-family: "Lato",sans-serif;
         }
-        #main{
-
-        }
         #free{
             display: flex;
-            width: 100%;
             background-color: grey;
             color: white;
             padding: 10px;
@@ -48,7 +44,7 @@
         #links>a{
             margin: 5px;
             text-decoration: none;  
-            color: black;
+            color: rgb(68, 123, 68);
         }
      
         .nookGlow{
@@ -56,7 +52,7 @@
             padding-left: 10%;
         }
         img{
-            width: 200px;
+            width: 20%;
         }
         .line{
             border-left: 1px solid rgb(102, 126, 102);
@@ -73,13 +69,23 @@
         #fic{
             display: grid;
             grid-template-columns: repeat(4,1fr);
+            width: 100%;
         }
+     
+
         #fic>div{
             margin:auto;
             width: 80%;
+            text-align: justify;
+        }
+        #fic>div>button{
+            width: 100px;
+            height: 35px;
+            border-radius: 20px;
+            border: none;
         }
         #fic>div>img{
-            width: 200px;
+            width: 80%;
         }
         .offer>h2{
         font-family: sans-serif;
@@ -92,7 +98,7 @@
         display: block;
         width: 35%;
         height: 1.5px;
-        background: #191970;
+        background:  #4a7152;
         right: 0;
         top: 50%;
         position: absolute;
@@ -103,7 +109,7 @@
         display: block;
         width: 35%;
         height: 1.5px;
-        background: #191970;
+        background:  #4a7152;
         left: 0;
         top: 50%;
         position: absolute;
@@ -120,6 +126,165 @@
             padding-right: 4%;
             text-align: justify;
         }
+        @media all and (max-width: 1200px)and (min-width: 700px) {
+        #fic{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .offer>p{
+            text-align: end;
+        }
+        .offer>p>a{
+            text-align: end;
+          color: rgb(74, 137, 74);
+        }
+        .offer>h2{
+        font-family: sans-serif;
+        margin: auto;
+        text-align: start;   
+        position: relative;          
+        }
+        .offer>h2::after{
+            /* content: ""; */
+        display: block;
+        width: 50%;
+        height: 1.5px;
+        background:  #4a7152;
+        right: 0;
+        top: 0%;
+        position: absolute;
+        margin-left: 3%;
+        }
+        .offer>h2::before{
+            /* content: ""; */
+        display: block;
+        width: 50%;
+        height: 1.5px;
+        background:  #4a7152;
+        left: 0;
+        top: 0%;
+        position: absolute;
+        margin-right: 2%;
+        }
+        #vl {
+             border-left: 0px solid rgb(102, 126, 102);
+            height: 0px;
+        }
+        .line{
+            border-left: 0px solid rgb(102, 126, 102);
+            height: 0px;
+            
+        }
+        /* .nookGlow{
+            display: block;
+           margin: auto;
+        }
+        .text{
+            text-align: start;
+            text-align: justify;
+            padding-left: 34%;
+            padding-right: 2%;
+            width: 50%;
+        } */
+        img{
+            width: 30%;
+
+        }
+        .middle{
+            display: block;
+            text-align: center;   
+            padding: 1%;       
+        }
+        /* .sale>div{
+            display: block;
+            justify-content: center;
+            margin: 2%;
+        }
+        .texter{
+            width: 30%;
+            padding-left: 35%;
+            padding-right: 4%;
+            text-align: justify;
+        } */
+      }
+      @media all and (max-width: 699px)and (min-width: 400px) {
+        #fic{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .offer>p{
+            text-align: end;
+        }
+        .offer>p>a{
+            text-align: end;
+          color: rgb(74, 137, 74);
+        }
+        .offer>h2{
+        font-family: sans-serif;
+        margin: auto;
+        text-align: start;   
+        position: relative;          
+        }
+        .offer>h2::after{
+            /* content: ""; */
+        display: block;
+        width: 50%;
+        height: 1.5px;
+        background:  #4a7152;
+        right: 0;
+        top: 0%;
+        position: absolute;
+        margin-left: 3%;
+        }
+        .offer>h2::before{
+            /* content: ""; */
+        display: block;
+        width: 50%;
+        height: 1.5px;
+        background:  #4a7152;
+        left: 0;
+        top: 0%;
+        position: absolute;
+        margin-right: 2%;
+        }
+        #vl {
+             border-left: 0px solid rgb(102, 126, 102);
+            height: 0px;
+        }
+        .line{
+            border-left: 0px solid rgb(102, 126, 102);
+            height: 0px;
+            
+        }
+        .nookGlow{
+            display: block;
+           margin: auto;
+        }
+        .text{
+            text-align: start;
+            text-align: justify;
+            padding-left: 34%;
+            padding-right: 2%;
+            width: 50%;
+        }
+        img{
+            width: 50%;
+        }
+        .middle{
+            display: block;
+            text-align: center;   
+            padding: 1%;       
+        }
+        .sale>div{
+            display: block;
+            justify-content: center;
+            margin: 2%;
+        }
+        .texter{
+            width: 30%;
+            padding-left: 35%;
+            padding-right: 4%;
+            text-align: justify;
+        }
+      }
     </style>
 </head>
 <body>
@@ -130,8 +295,8 @@
         <h3>Free Shipping on Orders of $40 or More</h3>
     </div>
     <div id="off">
-        <h1>Fiction Book Store</h1>
-        <p>Discover the best books to read right now including trending titles, bookseller recommendations, new releases and more.</p>
+        <h1>eBooks & NOOK</h1>
+        <p>Browse eBooks in your favorite genres (including trending new releases) to buy and read immediately with your NOOK or free Barnes & Noble NOOK app!</p>
     </div>
   <div class="middle">
     <div id="links">
@@ -209,7 +374,7 @@
         </div>
         
             <div class="offer" id="fiction">
-                <h2>Books you love</h2>
+                <h2>Books you love to read</h2>
                 <p><a href="#">See All</a></p>
                 <div id="fic"></div>
                

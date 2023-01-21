@@ -29,14 +29,14 @@ function displayBooks(Array){
     let title = document.createElement("p");
     title.innerText = element.title;
 
-    let subtitle = document.createElement("p");
-    subtitle.innerText = element.subtitle;
+    // let subtitle = document.createElement("p");
+    // subtitle.innerText = element.subtitle;
 
     let  authors = document.createElement("p");
      authors.innerText = element.authors;
     
-    //  let price = document.createElement("h5");
-    //  price.innerText = "$"+40;
+     let price = document.createElement("h3");
+     price.innerText = "$ 40";
 
     let wishlist = document.createElement("button");
     wishlist.innerText = "Wishlist";
@@ -64,7 +64,7 @@ function displayBooks(Array){
     }
 
     })
-   card.append(image, title, subtitle,  authors, wishlist);
+   card.append(image, title, authors,price, wishlist);
    fiction.append(card);
   })
    }

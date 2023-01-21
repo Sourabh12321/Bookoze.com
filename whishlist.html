@@ -8,6 +8,7 @@
     <style>
         .main{
             /* text-align: center; */
+            color:black;
         }.main>h1{
             margin: auto;
         text-align: center;       
@@ -37,6 +38,7 @@
         }
         a{
             text-decoration: none;
+            color: black;
         }
         .inner{
             display: flex;
@@ -60,9 +62,12 @@
             margin-left: 3%;
             margin-right: 3%;
         }
+        #line{
+            margin-left: 10%;
+        }
         #vl {
              border-left: 1px solid rgb(102, 126, 102);
-            height: 1000px;
+            height: 1800px;
         }
         .my-wishlist{
             width: 80%;
@@ -73,21 +78,73 @@
             padding-top: 1%;
             padding-right: 4%;
            justify-content: flex-end;
+          
 
         }
         .select>select{
             margin-right: 2%;
             height: 45px;
            text-align: center;
+           font-size: 16px;
         }
         .items>div{
             display: flex;
             margin-bottom: 3%;
             
         }
+        .items>div>div>button{
+            width: 110px;
+            height: 40px;
+            border: none;
+            background-color: #4a7152;
+            color: aliceblue;
+            font-size: 14px;
+           margin-left: 2%;
+        }
         img{
-            width: 40%;
-            padding-left: 3%;
+            width: 50%;
+            padding-left: 6%;
+        }
+        @media all and (max-width: 1200px)and (min-width: 600px){
+
+            .main>h1::after{
+            /* content: ""; */
+        display: block;
+        width: 50%;
+        height: 1.5px;
+        background: #4a7152;
+        right: 0;  
+        top: 0;
+        position: absolute;
+        margin-right: 3%;
+        }
+        .main>h1::before{
+            /* content: ""; */
+        display: block;
+        width: 50%;
+        height: 1.5px;
+        background: #4a7152;
+        left: 0;
+        top: 0;
+        position: absolute;
+        margin-left: 3%;
+        }
+        .inner{
+            display: block;
+            margin: auto;
+            width: 100%;
+        }
+        #vl {
+             border-left: 0px solid rgb(102, 126, 102);
+            height: 0px;
+        }
+        .create-new-wishlist{
+            width: 100%;
+            text-align: center;
+        }
+        .my-wishlist{
+            width: 100%;
+        }
         }
       
     </style>
@@ -102,9 +159,9 @@
                 <h4>Your Wishlists</h4>
                 <a href="#"><p>My Whishlist</p></a>
             </div>
-            <hr>
+            <hr id="line"> 
             <div class="create">
-                <span>+<p>Create New Wishlist</p></span>
+                <a href="#"><p>Create New Wishlist</p></a>
             </div>
         </div>
         <div id="vl"></div>
@@ -126,8 +183,8 @@
          <div class="select">
             <select name="" id="sort" style="width: 180px;">
                 <option value="default">Sort by :</option>
-                <option value="latest">Latest - Oldest</option>
-                <option value="oldest">Oldest - Lastest</option>
+                <!-- <option value="latest">Latest - Oldest</option>
+                <option value="oldest">Oldest - Lastest</option> -->
                 <option value="AtoZ">Title- A-Z</option>
                 <option value="ZtoA">Title- Z-A</option>
             </select>
