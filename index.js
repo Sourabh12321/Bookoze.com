@@ -3,14 +3,6 @@ let newThisWeek = document.getElementById("newThisWeek")
 let baseServerURL= "https://www.dbooks.org/api/recent"
 
 
-console.log('ashihs')
-
-
-
-
-
-
-
 
 
 
@@ -33,7 +25,7 @@ function fetchAndRenderproduct(queryParamString = null) {
     fetch(`${baseServerURL}${queryParamString ? queryParamString : ""}`)
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data.books);
+        console.log(data.books);
         let books = data.books.map((book) => ({
           id: book.id,
           imageUrl: book.image,

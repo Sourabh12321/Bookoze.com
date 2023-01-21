@@ -475,8 +475,8 @@ html {
 }
 
 .footer {
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 3px solid rgb(121, 102, 102);
+    border-radius: 2px;
 }
 
 /* .hide {
@@ -522,6 +522,10 @@ html {
     .open {
         display: block;
     }
+
+    /* .footer ul{
+        display: none;
+    } */
 }
 
 
@@ -567,7 +571,7 @@ html {
 
     /* for footer  */
 
-    #footer ul{
+    .footer ul{
         display: none;
     }
 
@@ -609,6 +613,13 @@ html {
     #sign_in_heading_1 h4 {
         display: none;
     }
+
+    .footer ul{
+        display: none;
+    }
+
+
+
 
 
 

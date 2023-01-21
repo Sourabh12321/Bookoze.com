@@ -764,10 +764,10 @@ transform: translateY(0);
 
 
   /* for footer  */
+  .footer ul{
+    display: none;
+}
 
-  #footer ul{
-      display: none;
-  }
 
 
 }
@@ -807,6 +807,10 @@ transform: translateY(0);
   #sign_in_heading_1 h4 {
       display: none;
   }
+
+  .footer ul{
+    display: none;
+}
 
 
 
