@@ -185,7 +185,10 @@ function fetchAndRenderproduct(queryParamString = null) {
    })
 
   
-
+let image = document.querySelector("#image1");
+image.addEventListener("click",function(){
+   window.location.assign("./ebook.html")
+})
 
 
   
