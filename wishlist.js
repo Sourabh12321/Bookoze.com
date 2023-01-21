@@ -1,6 +1,6 @@
 let basket = document.getElementById("items-in-wishlist");
 let sorting = document.getElementById("sort")
-let restData = JSON.parse(localStorage.getItem("wish-list"));
+let restData = JSON.parse(localStorage.getItem("wish"))||[];
 if(restData===null){
   restData=[];
 }
@@ -34,7 +34,7 @@ displayBooks(restData);
      
       let img = document.createElement("div")
     let image = document.createElement("img");
-    image.setAttribute("src",element.image);
+    image.setAttribute("src",element.imageUrl);
     
     let card = document.createElement("div");
 
@@ -82,7 +82,7 @@ displayBooks(restData);
         restData=restData.filter((el) => {
             return element.id!=el.id;
         })
-        localStorage.setItem("wish-list",JSON.stringify(restData))
+        localStorage.setItem("wish",JSON.stringify(restData))
     displayBooks(restData)
     })
 

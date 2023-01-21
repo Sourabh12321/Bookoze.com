@@ -21,6 +21,8 @@ fetchAndRenderproduct()
 
 
 
+
+
 function fetchAndRenderproduct(queryParamString = null) {
     fetch(`${baseServerURL}${queryParamString ? queryParamString : ""}`)
       .then((res) => res.json())
@@ -79,8 +81,12 @@ function fetchAndRenderproduct(queryParamString = null) {
     button.forEach(el=>{
       el.addEventListener('click',e=>{
         booksdata.forEach(ele=>{
+           let wishList = JSON.parse(localStorage.getItem("wish")) || [];
           if(ele.id=== e.target.parentNode.getAttribute('data-id')){
             alert(`${ele.title} added`)
+            ele.price =Math.floor(Math.random()*1000);
+           wishList.push(ele)
+            localStorage.setItem('wish', JSON.stringify(wishList))
           }
         })
       })
@@ -94,15 +100,20 @@ function fetchAndRenderproduct(queryParamString = null) {
    addtocart.forEach(el=>{
      el.addEventListener('click',e=>{
        booksdata.forEach(ele=>{
-         if(ele.id=== e.target.parentNode.getAttribute('data-id')){
-           alert(`${ele.title} added`)
-         }
+        let wish = JSON.parse(localStorage.getItem("wish")) || [];
+          if(ele.id=== e.target.parentNode.getAttribute('data-id')){
+            alert(`${ele.title} added`)
+            ele.price =Math.floor(Math.random()*1000);
+            wish.push(ele)
+            localStorage.setItem('wish', JSON.stringify(wish))
+          }
        })
      })
    })
     
   }
 
+  // productscard()
 
   // function productscard() {
   //   let cardList = `
@@ -153,7 +164,7 @@ function fetchAndRenderproduct(queryParamString = null) {
             </div>
             <div class ="card-item card-additional-info">${subtitle}</div>
           </div>
-          <button  class="button-27" role="button">Add to cart</button>
+          <button  class="button-27" role="button">Add to w</button>
         </div>
         
        
@@ -176,7 +187,10 @@ function fetchAndRenderproduct(queryParamString = null) {
 
    })
 
-  
+  let btn = document.querySelector("#fifty-fifty");
+  btn.addEventListener("click",function(){
+    window.location.assign("./ebook.html")
+  })
 
 
 

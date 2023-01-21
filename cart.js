@@ -1,4 +1,4 @@
-let addCart = JSON.parse(localStorage.getItem("cart")) || []
+let addCart = JSON.parse(localStorage.getItem("")) || []
 console.log(addCart)
 let totalItems = document.getElementById('total-items')
 let productCart = document.getElementById('item-cards')
