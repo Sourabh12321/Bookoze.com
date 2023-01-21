@@ -112,39 +112,39 @@ function fetchAndRenderproduct(queryParamString = null) {
   }
 
 
-  function productscard() {
-    let cardList = `
-      <div class="card-list">
-        ${booksdata
-          .map((item) =>
-            getCard(
+  // function productscard() {
+  //   let cardList = `
+  //     <div class="card-list">
+  //       ${booksdata
+  //         .map((item) =>
+  //           getCard(
          
-              item.id,
-              item.imageUrl,
-              item.title,
-              item.author,
-              item.subtitle
+  //             item.id,
+  //             item.imageUrl,
+  //             item.title,
+  //             item.author,
+  //             item.subtitle
               
-            )
-          )
-          .join("")}
-      </div>
-    `;
+  //           )
+  //         )
+  //         .join("")}
+  //     </div>
+  //   `;
   
-    document.getElementById("products").innerHTML = cardList;
+  //   document.getElementById("products").innerHTML = cardList;
     
-    let button =newThisWeek.querySelectorAll("button");
-    button.forEach(el=>{
-      el.addEventListener('click',e=>{
-        booksdata.forEach(ele=>{
-          if(ele.id=== e.target.parentNode.getAttribute('data-id')){
-            alert(`${ele.title} added`)
-          }
-        })
-      })
-    })
+  //   let button =newThisWeek.querySelectorAll("button");
+  //   button.forEach(el=>{
+  //     el.addEventListener('click',e=>{
+  //       booksdata.forEach(ele=>{
+  //         if(ele.id=== e.target.parentNode.getAttribute('data-id')){
+  //           alert(`${ele.title} added`)
+  //         }
+  //       })
+  //     })
+  //   })
    
-  }
+  // }
 
 
 
@@ -185,10 +185,7 @@ function fetchAndRenderproduct(queryParamString = null) {
    })
 
   
-let image = document.querySelector("#image1");
-image.addEventListener("click",function(){
-   window.location.assign("./ebook.html")
-})
+
 
 
   
