@@ -114,7 +114,7 @@ let orderSuc = document.getElementById("order")
 orderSuc.addEventListener("click", () => {
 	alert("Order Successful")
 	setTimeout(() => {
-		window.location.href = "cart.html"
+		window.location.href = "index.html"
 	},1000)
 	
 })

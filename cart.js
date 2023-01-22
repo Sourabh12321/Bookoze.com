@@ -1,5 +1,5 @@
-let addCart = JSON.parse(localStorage.getItem("")) || []
-console.log(addCart)
+let cartData = JSON.parse(localStorage.getItem("cart-list")) || [];
+console.log(cartData)
 let totalItems = document.getElementById('total-items')
 let productCart = document.getElementById('item-cards')
 let subtotal = document.getElementById('subtotal-items')
@@ -14,7 +14,7 @@ let couponButton = document.getElementById("coupon-btn")
 function append(){
     productCart.innerHTML = null
 
-    addCart.map((item,index) => {
+    cartData.map((item,index) => {
         let div = document.createElement("div")
         div.setAttribute("class","card-divs")
 
@@ -23,14 +23,14 @@ function append(){
 
         let imagediv = document.createElement("div")
         let image = document.createElement("img")
-        image.setAttribute("src",item.image)
+        image.setAttribute("src",item.imageUrl)
 
         let otherthings = document.createElement("div")
         let price = document.createElement("p")
         price.innerText = "$" + item.price
 
-        totalItems.innerText = addCart.length
-        subtotal.innerText = addCart.length
+        totalItems.innerText = cartData.length
+        subtotal.innerText = cartData.length
 
         let quan = document.createElement("div")
         quan.setAttribute("id","quantity-div")
@@ -47,7 +47,9 @@ function append(){
             totalOf()
         })
         less.addEventListener("click",()=>{
-            item.quantity--
+            if(item.quantity>1){
+                item.quantity--
+            }
             span.innerText = item.quantity
             totalOf()
         })
@@ -57,8 +59,8 @@ function append(){
         remove.innerText = "Remove"
 
         remove.addEventListener("click",()=>{
-            addCart.splice(index,1)
-            localStorage.setItem("cart",JSON.stringify(addCart))
+            cartData.splice(index,1)
+            localStorage.setItem("cart",JSON.stringify(cartData))
             append()
             totalOf()
               
@@ -79,7 +81,7 @@ append()
 let sum;
 function totalOf(){
     sum = 0
-    for(let key of addCart){
+    for(let key of cartData){
         sum += key.price*key.quantity
     }
     subtotalSum.innerText = Math.ceil(sum) 

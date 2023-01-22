@@ -69,7 +69,8 @@ displayBooks(restData);
     if(alreadyAdded === true){
       alert("Book Already in Cart")
     }else{
-      cartData.push(element)
+      cartData.push({...element,quantity:1})
+      console.log(cartData)
       localStorage.setItem("cart-list",JSON.stringify(cartData))
       alert("Book Added To Cart")
     }
