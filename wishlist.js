@@ -1,6 +1,7 @@
 let basket = document.getElementById("items-in-wishlist");
 let sorting = document.getElementById("sort")
 let restData = JSON.parse(localStorage.getItem("wish"))||[];
+console.log(restData)
 if(restData===null){
   restData=[];
 }
@@ -34,7 +35,7 @@ displayBooks(restData);
      
       let img = document.createElement("div")
     let image = document.createElement("img");
-    image.setAttribute("src",element.imageUrl);
+    image.setAttribute("src",element.image);
     
     let card = document.createElement("div");
 
@@ -45,10 +46,10 @@ displayBooks(restData);
     subtitle.innerText = element.subtitle;
 
     let  authors = document.createElement("p");
-     authors.innerText = element. authors;
+     authors.innerText ="John Sigma"
 
      let price = document.createElement("h3");
-     price.innerText = "$ 40";
+     price.innerText = element.price;
 
      let add = document.createElement("button")
      add.innerText = "Add to Cart"

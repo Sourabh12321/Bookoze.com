@@ -8,6 +8,7 @@ fetch("https://63ca48cef36cbbdfc7554c04.mockapi.io/books3")
 })
 .then((actualData) => {
 fetchedData=actualData;
+
 console.log(actualData)
 displayBooks(actualData);
 })
@@ -36,14 +37,17 @@ function displayBooks(Array){
      authors.innerText = element.authors;
     
      let price = document.createElement("h3");
-     price.innerText = "$ 40";
+     price.innerText ="$" +Math.floor(Math.random()*1000);
 
     let wishlist = document.createElement("button");
     wishlist.innerText = "Wishlist";
     
 
     wishlist.addEventListener("click",() => {
-      let restData = JSON.parse(localStorage.getItem("wish-list"));
+
+      let restData = JSON.parse(localStorage.getItem("wish"));
+      
+      
       if(restData===null){
         restData=[];
       }
@@ -58,8 +62,9 @@ function displayBooks(Array){
     if(alreadyAdded === true){
       alert("Book Already in Wishlist")
     }else{
+      element.price = Math.floor(Math.random()*1000)
       restData.push(element)
-      localStorage.setItem("wish-list",JSON.stringify(restData))
+      localStorage.setItem("wish",JSON.stringify(restData))
       alert("Book Added To Wishlist")
     }
 

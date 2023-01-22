@@ -20,6 +20,7 @@ fetch("https://www.dbooks.org/api/recent")
 })
 .then((data) => {
     console.log(data.books);
+    
     fun1(data.books);
     fun2(data.books);
     fun3(data.books);
@@ -48,11 +49,12 @@ function fun1(data){
         div1.append(span, image, button);
         button.textContent = "Add to wishlist";
         button.addEventListener("click",function(){
-            let bookd = JSON.parse(localStorage.getItem("wish-list"))||[];
+            alert(`${ele.title} is added to Wishlist`)
+            let bookd = JSON.parse(localStorage.getItem("wish"))||[];
             let a = ele;
-            a.price = 300
+            a.price = Math.floor(Math.random()*1000)
             bookd.push(a);
-            localStorage.setItem("wish-list",JSON.stringify(bookd));
+            localStorage.setItem("wish",JSON.stringify(bookd));
         })
 
         let div2 = document.createElement("div");
@@ -67,9 +69,8 @@ function fun1(data){
         p.setAttribute("class", "product-short-description")
 
         let span2 = document.createElement("span");
-        span2.textContent = "RS . 300";
+        span2.textContent = `Rs. ${ Math.floor(Math.random()*1000)}`
         span2.setAttribute("clas","price");
-
         div2.append(h2, p, span2);
 
         main.append(div1, div2)
@@ -100,12 +101,14 @@ function fun2(data){
         div1.append(span, image, button);
         button.textContent = "Add to wishlist";
         button.addEventListener("click",function(){
-            let bookd = JSON.parse(localStorage.getItem("wish-list"))||[];
+            alert(`${ele.title} is added to Wishlist`)
+            let bookd = JSON.parse(localStorage.getItem("wish"))||[];
             let a = ele;
-            a.price = 300
+            a.price = Math.floor(Math.random()*1000)
             bookd.push(a);
-            localStorage.setItem("wish-list",JSON.stringify(bookd));
+            localStorage.setItem("wish",JSON.stringify(bookd));
         })
+
 
         let div2 = document.createElement("div");
         div2.setAttribute("class", "product-info");
@@ -119,7 +122,7 @@ function fun2(data){
         p.setAttribute("class", "product-short-description")
 
         let span2 = document.createElement("span");
-        span2.textContent = "RS . 300";
+        span2.textContent = `Rs. ${ Math.floor(Math.random()*1000)}`;
         span2.setAttribute("clas","price");
 
         div2.append(h2, p, span2);
@@ -152,12 +155,14 @@ function fun3(data){
         div1.append(span, image, button);
         button.textContent = "Add to wishlist";
         button.addEventListener("click",function(){
-            let bookd = JSON.parse(localStorage.getItem("wish-list"))||[];
+            alert(`${ele.title} is added to Wishlist`)
+            let bookd = JSON.parse(localStorage.getItem("wish"))||[];
             let a = ele;
-            a.price = 300
+            a.price = Math.floor(Math.random()*1000)
             bookd.push(a);
-            localStorage.setItem("wish-list",JSON.stringify(bookd));
+            localStorage.setItem("wish",JSON.stringify(bookd));
         })
+
 
         let div2 = document.createElement("div");
         div2.setAttribute("class", "product-info");
@@ -171,7 +176,7 @@ function fun3(data){
         p.setAttribute("class", "product-short-description")
 
         let span2 = document.createElement("span");
-        span2.textContent = "RS . 300";
+        span2.textContent =`Rs. ${ Math.floor(Math.random()*1000)}`;
         span2.setAttribute("clas","price");
 
         div2.append(h2, p, span2);
@@ -204,11 +209,12 @@ function fun4(data){
         div1.append(span, image, button);
         button.textContent = "Add to wishlist";
         button.addEventListener("click",function(){
-            let bookd = JSON.parse(localStorage.getItem("wish-list"))||[];
+            alert(`${ele.title} is added to Wishlist`)
+            let bookd = JSON.parse(localStorage.getItem("wish"))||[];
             let a = ele;
-            a.price = 300
+            a.price = Math.floor(Math.random()*1000)
             bookd.push(a);
-            localStorage.setItem("wish-list",JSON.stringify(bookd));
+            localStorage.setItem("wish",JSON.stringify(bookd));
         })
 
         let div2 = document.createElement("div");
@@ -223,7 +229,7 @@ function fun4(data){
         p.setAttribute("class", "product-short-description")
 
         let span2 = document.createElement("span");
-        span2.textContent = "RS . 300";
+        span2.textContent =  `Rs. ${ Math.floor(Math.random()*1000)}`;
         span2.setAttribute("clas","price");
 
         div2.append(h2, p, span2);
@@ -256,12 +262,14 @@ function fun5(data){
         div1.append(span, image, button);
         button.textContent = "Add to wishlist";
         button.addEventListener("click",function(){
-            let bookd = JSON.parse(localStorage.getItem("wish-list"))||[];
+            alert(`${ele.title} is added to Wishlist`)
+            let bookd = JSON.parse(localStorage.getItem("wish"))||[];
             let a = ele;
-            a.price = 300
+            a.price = Math.floor(Math.random()*1000)
             bookd.push(a);
-            localStorage.setItem("wish-list",JSON.stringify(bookd));
+            localStorage.setItem("wish",JSON.stringify(bookd));
         })
+
 
         let div2 = document.createElement("div");
         div2.setAttribute("class", "product-info");
@@ -275,7 +283,7 @@ function fun5(data){
         p.setAttribute("class", "product-short-description")
 
         let span2 = document.createElement("span");
-        span2.textContent = "RS . 300";
+        span2.textContent = `Rs. ${ Math.floor(Math.random()*1000)}`;
         span2.setAttribute("clas","price");
 
         div2.append(h2, p, span2);

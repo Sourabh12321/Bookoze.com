@@ -383,7 +383,8 @@ html {
   box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
-  /* display: block; */
+  display: block;
+  margin: auto;
   font-size: 15px;
   font-weight: 400px;
   line-height: normal;
@@ -393,7 +394,7 @@ html {
   padding: 4px;
   outline: none;
   text-align: center;
-  width: 30ppx;
+  width: 200px;
 }
 
 .button-27:disabled {

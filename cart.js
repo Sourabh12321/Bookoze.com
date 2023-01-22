@@ -1,5 +1,6 @@
 let cartData = JSON.parse(localStorage.getItem("cart-list")) || [];
 console.log(cartData)
+
 let totalItems = document.getElementById('total-items')
 let productCart = document.getElementById('item-cards')
 let subtotal = document.getElementById('subtotal-items')
@@ -23,7 +24,7 @@ function append(){
 
         let imagediv = document.createElement("div")
         let image = document.createElement("img")
-        image.setAttribute("src",item.imageUrl)
+        image.setAttribute("src",item.image)
 
         let otherthings = document.createElement("div")
         let price = document.createElement("p")

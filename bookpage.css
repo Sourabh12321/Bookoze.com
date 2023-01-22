@@ -14,14 +14,24 @@
 }
 #first-2{
   width:80%;
+  margin-top: 30px;
   text-align: center;
 }
+
+#book{
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
 #first-1>h3{
   font-size:15px;
+  margin: 10px 0px;
 }
 #first-1>p{
   color:rgb(11, 141, 98);
   font-size: 12px;
+  line-height: 24px;
 }
 
 
@@ -243,6 +253,9 @@
 }
 
 
+
+
+
 /* edited css start here    */
 
 * {
@@ -262,9 +275,10 @@ img {
 
 #head {
   width: 100%;
-  /* position:sticky; */
-  /* top: 0px; */
+  position:sticky;
+   top: 0px; 
   background-color: beige;
+  z-index: 100;
 }
 
 html {
@@ -490,149 +504,6 @@ html {
 
   
 }
-
-
-
-
-/* mid section start here  */
-.card-list{
-  width: 100%;
-  margin: auto;
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding-top: 10px;
-  padding-bottom: 40px;
-
-}
-
-.hideproduct{
-  display:none;
-}
-
-
-
-#searchproduct .card-list{
-  width: 100%;
-  margin: auto;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
-  overflow-x: auto;
-  padding-top: 10px;
-  padding-bottom: 40px;
-
-}
-
-
- .card-body{
-  height: 40px;
-  overflow-y: hidden;
-}
-
-.section{
-  margin: 30px 10px;
-   } 
-
-.card{
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding: 20px;
-}
-
-.card-image{
-  width: 300px;
-  height: 330px;
-}
-
-.card-image img{
-  height: 320px;
-}
-
-/* .button-27{
-
-  padding:4px;
-  margin-top:10px;
-} */
-
-
-
-#products{
-  width:97%;
-  margin: auto;
-  padding-top: 20px;
-}
-
-
-
-#fifty{
-  width:90%;
-  margin: auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-
-
-
-.button-27 {
-appearance: none;
-background-color:darkkhaki;
-border: 2px solid darkgrey;
-border-radius: 10px;
-box-sizing: border-box;
-color: #FFFFFF;
-cursor: pointer;
-/* display: block; */
-font-size: 15px;
-font-weight: 400px;
-line-height: normal;
-margin-top: 10px;
-min-height: 30px;
-min-width: 0;
-padding: 4px;
-outline: none;
-text-align: center;
-width: 30ppx;
-}
-
-.button-27:disabled {
-pointer-events: none;
-}
-
-.button-27:hover {
-box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-transform: translateY(-2px);
-}
-
-.button-27:active {
-box-shadow: none;
-transform: translateY(0);
-}
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

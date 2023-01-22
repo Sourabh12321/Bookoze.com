@@ -12,10 +12,10 @@ let baseServerURL= "https://www.dbooks.org/api/recent"
 // function getdata(data){
 //     data
 // }
-let books=[];
+var books=[];
 fetchAndRenderproduct()
 
-
+// console.log(booksdata)
 
 
 
@@ -27,10 +27,9 @@ function fetchAndRenderproduct(queryParamString = null) {
     fetch(`${baseServerURL}${queryParamString ? queryParamString : ""}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.books);
         let books = data.books.map((book) => ({
           id: book.id,
-          imageUrl: book.image,
+          image: book.image,
           url:  `${baseServerURL}${book.url}`,
           title: book.title,
           author: book.author,
@@ -38,16 +37,20 @@ function fetchAndRenderproduct(queryParamString = null) {
 
         
         }));
-        booksdata=books;
+         booksdata=books;
        
         renderCardList(booksdata);
       });
+    
   }
+
+
 
  
 
 
   function renderCardList(cardData) {
+    // console.log(cardData)
     let cardList = `
       <div class="card-list">
         ${booksdata
@@ -55,7 +58,7 @@ function fetchAndRenderproduct(queryParamString = null) {
             getCard(
          
               item.id,
-              item.imageUrl,
+              item.image,
               item.title,
               item.author,
               item.subtitle
@@ -66,56 +69,86 @@ function fetchAndRenderproduct(queryParamString = null) {
       </div>
     `;
 
+
     let searchbar= document.getElementById("addTodoForm")
-    searchbar.addEventListener('submit', e=>{
-     e.preventDefault()
-     let value= document.getElementById("Hsearch").value;
-     console.log(value)
-   
- 
-    let newsearch= booksdata.filter(function(elem){
-       return elem.title.toLowerCase().includes(value.toLowerCase())
-       console.log(elem)
-   })
- 
-   let cardi =
- 
-   `
-       <div class="card-list-data">
-         ${newsearch
-           .map((item) =>
-             getCard(
-          
-               item.id,
-               item.imageUrl,
-               item.title,
-               item.author,
-               item.subtitle
-               
-             )
-           )
-           .join("")}
-       </div>
-     `;
- 
-     if(value==''){
-       document.querySelector("#searchproduct").innerHTML=null;
- 
-       alert("Please insert Product Name");
- }else{
-   document.querySelector("#searchproduct").innerHTML= cardi;
- 
- }
-     
+   searchbar.addEventListener('submit', e=>{
+    e.preventDefault()
+    let value= document.getElementById("Hsearch").value;
+    console.log(value)
   
+
+   let newsearch= booksdata.filter(function(elem){
+      return elem.title.toLowerCase().includes(value.toLowerCase())
+      console.log(elem)
+  })
+
+  let cardi =
+
+  `
+      <div class="card-list-data">
+        ${newsearch
+          .map((item) =>
+            getCard(
+         
+              item.id,
+              item.image,
+              item.title,
+              item.author,
+              item.subtitle
+              
+            )
+          )
+          .join("")}
+      </div>
+    `;
+
+    if(value==''){
+      document.querySelector("#searchproduct").innerHTML=null;
+
+      alert("Please insert Product Name");
+}else{
+  document.querySelector("#searchproduct").innerHTML= cardi;
+
+}
+let searchProduct= document.getElementById('searchproduct');
+
+   
+
+let buttonInSearch =searchProduct.querySelectorAll("button");
+buttonInSearch.forEach(el=>{
+  el.addEventListener('click',e=>{
+   console.log(e.target)
+    booksdata.forEach(ele=>{
+       let wishList = JSON.parse(localStorage.getItem("wish")) || [];
+      if(ele.id=== e.target.parentNode.getAttribute('data-id')){
+        alert(`${ele.title} added`)
+        ele.price =Math.floor(Math.random()*1000);
+       wishList.push(ele)
+        localStorage.setItem('wish', JSON.stringify(wishList))
+      }
     })
+  })
+})
+ 
+   })
+  
+
+
+   
+
+
+  
+
+
+  
 
 
 
    let newThisWeek= document.getElementById('newThisWeek');
     newThisWeek.innerHTML = cardList;
+    console.log(newThisWeek)
 
-    let button =newThisWeek.querySelectorAll("button");
+    let button =document.querySelectorAll("button");
     button.forEach(el=>{
       el.addEventListener('click',e=>{
         booksdata.forEach(ele=>{
@@ -202,7 +235,7 @@ function fetchAndRenderproduct(queryParamString = null) {
             </div>
             <div class ="card-item card-additional-info">${subtitle}</div>
           </div>
-          <button  class="button-27" role="button">Add to w</button>
+          <button  class="button-27" role="button">Add to Wishlist</button>
         </div>
         
        
@@ -213,17 +246,17 @@ function fetchAndRenderproduct(queryParamString = null) {
 
 
 
-  let searchbar= document.getElementById("addTodoForm")
-   searchbar.addEventListener('submit', e=>{
-    e.preventDefault()
-    let value= document.getElementById("Hsearch").value;
-    console.log(value);
+  // let searchbar= document.getElementById("addTodoForm")
+  //  searchbar.addEventListener('submit', e=>{
+  //   e.preventDefault()
+  //   let value= document.getElementById("Hsearch").value;
+  //   console.log(value);
 
-    console.log()
+  //   console.log()
 
 
 
-   })
+  //  })
 
   let btn = document.querySelector("#fifty-fifty");
   btn.addEventListener("click",function(){
