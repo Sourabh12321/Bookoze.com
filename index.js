@@ -66,11 +66,49 @@ function fetchAndRenderproduct(queryParamString = null) {
       </div>
     `;
 
-
-   let searchelement= document.getElementById("searchproduct");
-
-   searchelement.innerHTML=cardList;
+    let searchbar= document.getElementById("addTodoForm")
+    searchbar.addEventListener('submit', e=>{
+     e.preventDefault()
+     let value= document.getElementById("Hsearch").value;
+     console.log(value)
+   
+ 
+    let newsearch= booksdata.filter(function(elem){
+       return elem.title.toLowerCase().includes(value.toLowerCase())
+       console.log(elem)
+   })
+ 
+   let cardi =
+ 
+   `
+       <div class="card-list-data">
+         ${newsearch
+           .map((item) =>
+             getCard(
+          
+               item.id,
+               item.imageUrl,
+               item.title,
+               item.author,
+               item.subtitle
+               
+             )
+           )
+           .join("")}
+       </div>
+     `;
+ 
+     if(value==''){
+       document.querySelector("#searchproduct").innerHTML=null;
+ 
+       alert("Please insert Product Name");
+ }else{
+   document.querySelector("#searchproduct").innerHTML= cardi;
+ 
+ }
+     
   
+    })
 
 
 
