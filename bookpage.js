@@ -297,4 +297,11 @@ function fun5(data){
 
 
 
+document.querySelector("#accIcon").addEventListener("click",()=>{
+    window.location.assign("./signup.html")
+  })
+
+
+
+
 

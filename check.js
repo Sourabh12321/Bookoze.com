@@ -118,3 +118,18 @@ orderSuc.addEventListener("click", () => {
 	},1000)
 	
 })
+
+
+document.querySelector("#order").addEventListener('click',()=>{
+	// let afterCheckout= local
+console.log('asdfd')
+	window.localStorage.removeItem('cart-list');
+
+
+})
+
+
+
+document.querySelector("#accIcon").addEventListener("click",()=>{
+    window.location.assign("./signup.html")
+  })

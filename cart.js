@@ -121,3 +121,10 @@ couponButton.addEventListener("click",()=>{
         orderTotal.innerText = Math.ceil(sum-temp) + `(-${Math.ceil(temp)})`
     }
 })
+
+
+
+
+document.querySelector("#accIcon").addEventListener("click",()=>{
+    window.location.assign("./signup.html")
+  })

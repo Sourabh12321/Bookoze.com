@@ -73,3 +73,12 @@ function displayBooks(Array){
    fiction.append(card);
   })
    }
+
+
+
+  //  login signup Symbol 
+  document.querySelector("#accIcon").addEventListener("click",()=>{
+    window.location.assign("./signup.html")
+  })
+
+

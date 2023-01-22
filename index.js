@@ -264,6 +264,18 @@ buttonInSearch.forEach(el=>{
   })
 
 
+  let imgToEbook= document.querySelector(".imageSlider")
+  imgToEbook.addEventListener('click',(e)=>{
+    window.location.assign("./bookpage.html")
+  })
+
+  document.querySelector("#accIcon").addEventListener("click",()=>{
+    window.location.assign("./signup.html")
+  })
+
+
+
+
 
   
  

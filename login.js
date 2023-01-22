@@ -1,37 +1,50 @@
-let details_arr = JSON.parse(localStorage.getItem("details")) || []
-let form = document.querySelector('form')
 
-form.addEventListener('submit', signup)
-function signup(event) {
-    event.preventDefault();
+let form = document.querySelector('.editform');
 
-    let email = document.querySelector('#email').value;
-    let password = document.querySelector('#password').value;
-    if (email !== "" && password !== "") {
-        let flag_email = "No";
-        let pass = "";
-        let temp;
+let userdata= 
+JSON.parse(localStorage.getItem('userdata')) || [];
 
-        for (let i = 0; i < details_arr.length; i++) {
-            if (email == details_arr[i].email) {
+document.querySelector('.editform').addEventListener('submit', (el)=>{
+  el.preventDefault();
+  let mail=document.getElementById('email').value;
+  let pasword= document.getElementById('password').value;
+// console.log(mail,pasword);
 
-                flag_email = "yes";
-                pass = details_arr[i].password;
 
-                temp = details_arr[i];
-                }
-                
-            console.log(details_arr[i]);
-        }
+  let id=false;
+  for(let i=0;i<userdata.length;i++){
+      if(userdata[i].email===mail){
+          id=true;
+      }
+  }
 
-        if (flag_email == "yes" && pass == password) {
+  let pwd=false;
+  for(let i=0;i<userdata.length;i++){
+      if(userdata[i].password===pasword){
+          pwd=true;
+      }
+  }
 
-            location.href = "index.html";
-            form.reload();
-        } else {
-            alert("Invalid Email or Password ")
-        }
-    } else {
-        alert("please fill the valid details")
-    }
-}
+  if(id==false){
+      alert('Please Insert Correct Email Id')
+      if(pwd==false){
+          alert('Your Password is Incorrect')
+      }
+  }
+ 
+  if(id==true && pwd==true ){
+      alert('You are successfully logged in to the page');
+      window.location.replace("index.html");
+  }
+
+})
+   
+
+
+
+
+
+  //  login signup Symbol 
+  document.querySelector("#accIcon").addEventListener("click",()=>{
+    window.location.assign("./signup.html")
+  })

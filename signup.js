@@ -1,34 +1,45 @@
-let details_arr = JSON.parse(localStorage.getItem("details")) || [];
-let form = document.querySelector('form')
-form.addEventListener('submit', myfun)
-function myfun(event) {
-    event.preventDefault()
-    let name = document.querySelector('#name').value;
-    let email = document.querySelector('#email').value;
-    let password = document.querySelector('#password').value;
 
-    if (name !== "" && email !== "" && password !== "") {
-        let flag = "yes"
-        for (let i = 0; i < details_arr.length; i++) {
-            if (email == details_arr[i].email) {
-                flag = "no"
-            }
-        }
-        if (flag == "no") {
-            alert("email already taken")
-        } else {
-            let details_obj = {
-                name, email, password
-            }
-            details_arr.push(details_obj)
-            localStorage.setItem("details", JSON.stringify(details_arr))
-            alert("sign-up successful")
-            form.reset();
-            window.location.assign("./login.html");
-        }
+let userdata= 
+JSON.parse(localStorage.getItem('userdata')) || [];
 
-    }
-    else {
-        alert("Please fill Details first")
-    }
-};
+document.querySelector('.formdata').addEventListener('submit', (e)=>{
+    e.preventDefault();
+    console.log('afdadfadfsf')
+   
+    let name= document.getElementById('name').value;
+   
+    let email= document.getElementById('email').value;
+    let password= document.getElementById('password').value;
+    let obj={name:name, email:email, password:password}
+
+            let isalready=false;
+            for(let i=0;i<userdata.length;i++){
+              if(userdata[i].email==obj.email){
+              isalready=true;
+              break;
+              }}
+             
+              if(isalready===true){
+                
+                alert('This Email Id has been already used please try with another Email Id')
+                  }
+              else{
+                userdata.push(obj);
+      localStorage.setItem('userdata',JSON.stringify(userdata))
+      alert('Hii '+' '+first+' '+'your Account has created');
+      window.location.assign("./login.html")
+                  }
+    })
+
+
+
+    
+   
+
+
+
+
+  //  login signup Symbol 
+//   document.querySelector("#accIcon").addEventListener("click",()=>{
+//     window.location.assign("./signup.html")
+//   })

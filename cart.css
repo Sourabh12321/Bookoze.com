@@ -879,14 +879,16 @@ html {
         display: block;
     }
 
+    .footer ul{
+        display: none;
+    }
+
 
 
 
     /* for footer  */
 
-    #footer ul{
-        display: none;
-    }
+   
 
 
 }
@@ -924,6 +926,10 @@ html {
     }
 
     #sign_in_heading_1 h4 {
+        display: none;
+    }
+
+    .footer ul{
         display: none;
     }
 
