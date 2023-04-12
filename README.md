@@ -9,7 +9,7 @@ Our Team Members
 
 Website detail:  Bookoze is a one stop shop for all your books. We can buy any type of book from our website.
 
-netlify link : https://deluxe-bunny-ea807e.netlify.app/
+netlify link : https://brilliant-travesseiro-6fc7b9.netlify.app
 
 <li>sign in -- in this the user have to put the right email and the correct password to log in navbar. Only those user can sign in which are successfully sign up otherwise gives error.</li>
 
