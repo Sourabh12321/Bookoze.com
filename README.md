@@ -1,13 +1,6 @@
 # elated-silver-5908
+Bookoze is a one stop shop for all your books. We can buy any type of book from our website and listen audio books too.
 
-Our Team Members
-1. Sourabh rajput
-2. Rahul chamoli
-3. Devshruti sen
-4. Rutuja Deshmukh
-5. Ashish Nangare
-
-Website detail:  Bookoze is a one stop shop for all your books. We can buy any type of book from our website.
 
 netlify link : https://exquisite-medovik-dccfcb.netlify.app/index.html
 
@@ -39,4 +32,11 @@ netlify link : https://exquisite-medovik-dccfcb.netlify.app/index.html
 
 </ul>
 <br>
+
+Our Team Members
+1. Sourabh rajput
+2. Rahul chamoli
+3. Devshruti sen
+4. Rutuja Deshmukh
+5. Ashish Nangare
 
