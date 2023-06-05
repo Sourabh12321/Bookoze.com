@@ -1,8 +1,50 @@
-# Elated-silver-5908
+# volatile-basketball-1535
 Bookoze is a one stop shop for all your books. We can buy any type of book from our website and listen audio books too.
 
-
+# Bookoze 
 netlify link : https://exquisite-medovik-dccfcb.netlify.app/index.html
+
+
+# Tech Stack
+
+• HTML 
+• CSS
+• JavaScript
+
+
+
+# Home Page!
+
+![home page](https://github.com/Sourabh12321/elated-silver-5908/assets/112754483/2ea67346-f2b2-4b1d-84fc-f2c87bb3d070)
+
+# Register Page
+![register page](https://github.com/Sourabh12321/elated-silver-5908/assets/112754483/22f4e4df-9136-4e52-9ad9-eead8508c6ad)
+
+# Login Page
+![login page](https://github.com/Sourabh12321/elated-silver-5908/assets/112754483/dd16a900-e875-45d6-8313-8a0ef1da1c39)
+
+
+# Books Page
+![books-page](https://github.com/Sourabh12321/elated-silver-5908/assets/112754483/0eb9d22f-92c2-425d-9bbc-98b0b7918e4e)
+
+
+
+# Books Page
+![books-page](https://github.com/Sourabh12321/elated-silver-5908/assets/112754483/d0831897-962d-4dde-86ba-a9cce18a0e27)
+
+
+
+# whislist Page
+![whislist-page](https://github.com/Sourabh12321/elated-silver-5908/assets/112754483/af2a7062-bcda-41a1-963a-5d2d0abb1317)
+
+
+# Cart Page
+![whislist-page](https://github.com/Sourabh12321/elated-silver-5908/assets/112754483/d4a93326-540c-48f1-bde5-037b1ef62efd)
+
+
+# FeedBack
+If You want to give any feedback connect with me on- sourabh.rajput.22082001@gmail.com
+
 
 <li>sign in -- in this the user have to put the right email and the correct password to log in navbar. Only those user can sign in which are successfully sign up otherwise gives error.</li>
 
